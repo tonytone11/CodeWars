@@ -1,5 +1,6 @@
 /* This is for the questions */
 // This is for my comments
+// -- pseudocode
 
 
 /* 1. Create a function that gives a personalized greeting. 
@@ -76,6 +77,44 @@ function problem(x) {
         return total = x * 50 + 6;
     }
 }
+console.log(problem("plant"));
+console.log(problem(11));
 // I struggled with this one a lot but eventually learned about the operator typeof
 // which helps determine what type of input x is.
 
+
+/* 7. Nathan loves cycling.
+Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+ */
+function litres(time) {
+    return Math.floor(time * 0.5);
+}
+console.log(litres(0));
+console.log(litres(2));
+// This took me a longer than it should have because I it had to be Math.floor or Math.round, I tried Math.round, 
+// which gave me an error because the prompt wanted the smallest value returned whcih would be Math.floot to find that out.
+//
+
+
+/* 8. You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away!
+You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+Function should return true if it is possible and false if not.
+ */
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    // -- step 1: multiply the mpg of the car by the fuel left per gallon
+    // -- step 2: compare that result to the distanceToPump variable
+    // -- step 3: return t if you'll make it or f if you won't make it
+    let carDistance = mpg * fuelLeft;
+    if (carDistance >= distanceToPump) {
+        return true;
+    } else {
+        return false;
+    }
+};
+console.log(zeroFuel(100, 50, 2));
+console.log(zeroFuel(100, 25, 3));
+// This was the only challenge I wrote steps for because after reading the prompt 
+// I tought the challenge was going to require a little more logic compared to the other challenges.
+// but it ended being simpler than I made it out to be.
