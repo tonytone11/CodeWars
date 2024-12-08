@@ -66,7 +66,16 @@ console.log(getAge("8 years old"));
 // because I knew I had to convert the string to an int and pick the first char in the string.
 
 
-/* 6.
+/* 6. Make a function that returns the value multiplied by 50 and increased by 6. 
+If the value entered is a string it should return "Error".
  */
-
+function problem(x) {
+    if (typeof x === "string") {
+        return "Error";
+    } else {
+        return total = x * 50 + 6;
+    }
+}
+// I struggled with this one a lot but eventually learned about the operator typeof
+// which helps determine what type of input x is.
 
